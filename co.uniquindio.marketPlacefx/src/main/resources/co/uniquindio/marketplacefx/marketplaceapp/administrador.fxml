@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="485.0" prefWidth="781.0" styleClass="ba" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.uniquindio.marketplacefx.marketplaceapp.viewcontroller.AdministradorViewController">
+   <children>
+      <TabPane prefHeight="485.0" prefWidth="781.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="AdminVendedor" text="Vendedores">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="397.0" prefWidth="659.0">
+                     <children>
+                        <Label layoutX="27.0" layoutY="48.0" text="Nombre" />
+                        <Label layoutX="525.0" layoutY="48.0" text="Usuario" />
+                        <Label layoutX="280.0" layoutY="48.0" text="Apellido" />
+                        <Label layoutX="277.0" layoutY="94.0" text="Direccion" />
+                        <Label layoutX="31.0" layoutY="94.0" text="Cedula" />
+                        <Label layoutX="515.0" layoutY="94.0" text="Contraseña" />
+                        <TextField fx:id="txtNombreVendedor" layoutX="92.0" layoutY="44.0" promptText="Nombre" styleClass="search-box" />
+                        <TextField fx:id="txtCedula" layoutX="92.0" layoutY="90.0" promptText="Cedula" styleClass="search-box" />
+                        <TextField fx:id="txtApellidoVendedor" layoutX="334.0" layoutY="44.0" promptText="Apellido" styleClass="search-box" />
+                        <TextField fx:id="txtDireccionVendedor" layoutX="334.0" layoutY="90.0" promptText="Direccion" styleClass="search-box" />
+                        <TextField fx:id="txtUsuarioVendedor" layoutX="611.0" layoutY="44.0" promptText="Usuario" styleClass="search-box" />
+                        <TextField fx:id="txtContrasenaVendedor" layoutX="611.0" layoutY="90.0" promptText="Contraseña" styleClass="search-box" />
+                        <TableView fx:id="tableVendedores" layoutX="15.0" layoutY="193.0" prefHeight="257.0" prefWidth="750.0" styleClass="transparent">
+                          <columns>
+                            <TableColumn fx:id="tbNombreVendedor" prefWidth="111.20001411437988" text="Nombre" />
+                            <TableColumn fx:id="tbApellidoVendedor" prefWidth="104.80001068115234" text="Apellido" />
+                              <TableColumn fx:id="tbCedulaVendedor" prefWidth="134.4000244140625" text="Cedula" />
+                              <TableColumn fx:id="tbDireccionVendedor" prefWidth="131.20001220703125" text="Direccion" />
+                              <TableColumn fx:id="tbUsuarioVendedor" prefWidth="136.80007934570312" text="Usuario" />
+                              <TableColumn fx:id="tbContrasenaVendedor" prefWidth="147.99993896484375" text="Contraseña" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="bntAgragarVendedor" layoutX="231.0" layoutY="131.0" mnemonicParsing="false" onAction="#onAgregarVendedor" text="Agregar" />
+                        <Button fx:id="bntActualizarVendedor" layoutX="356.0" layoutY="131.0" mnemonicParsing="false" onAction="#onActualizarVendedor" text="Actualizar" />
+                        <Button fx:id="btnEliminarVendedor" layoutX="496.0" layoutY="131.0" mnemonicParsing="false" onAction="#onEliminarVendedor" text="Eliminar" />
+                        <Separator layoutX="1.0" layoutY="171.0" prefHeight="2.0" prefWidth="782.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="Estadisticas" text="Estadisticas">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="330.0" prefWidth="538.0">
+                     <children>
+                        <RadioButton fx:id="rbtnCantidadMensajes2Ven" layoutX="60.0" layoutY="52.0" mnemonicParsing="false" text="Cantidad de mensajes enviados entre dos vendedores" />
+                        <RadioButton fx:id="rbntCantidadFecha" layoutX="60.0" layoutY="90.0" mnemonicParsing="false" text="Cantidad de productos publicados en:" />
+                        <RadioButton fx:id="rbtnCantidadPorVendedor" layoutX="60.0" layoutY="132.0" mnemonicParsing="false" text="Cantidad productos publicados por" />
+                        <RadioButton fx:id="rbtnContactosPorVendedor" layoutX="60.0" layoutY="172.0" mnemonicParsing="false" text="Cantidad de contactos por cada vendedor" />
+                        <Button fx:id="btnExportar" layoutX="60.0" layoutY="256.0" mnemonicParsing="false" onAction="#onExportar" text="Exportar" />
+                        <ChoiceBox fx:id="chbNombreVendedores" layoutX="291.0" layoutY="128.0" prefHeight="26.0" prefWidth="174.0" />
+                        <RadioButton fx:id="rbtnTopProductos" layoutX="60.0" layoutY="212.0" mnemonicParsing="false" text="Top 10 de los productos con más me gusta." />
+                        <Label fx:id="mensajeLabel" layoutX="53.0" layoutY="308.0" text="Label" />
+                        <DatePicker fx:id="DatepikerAdmin" layoutX="292.0" layoutY="86.0" promptText="dd/MM/yyyy" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

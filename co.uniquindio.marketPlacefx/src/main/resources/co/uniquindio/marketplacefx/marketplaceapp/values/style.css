@@ -1,0 +1,26 @@
+.background{
+    /*-fx-background-color: #631c1c;*/
+    -fx-background-size: cover;
+    -fx-background-image: url("imagenes/fondoPiePag.jpg");
+}
+.colorBtn{
+    -fx-background-size: cover;
+    -fx-background-image: url("imagenes/icono.png");
+}
+
+.transparent{
+    -fx-background-color: rgba(0,0,0,0);
+}
+
+
+.search-box{
+    -fx-background-color: #111021
+    -fx-background-radius  10px;
+
+}
+.backgroundTab{
+    /*-fx-background-color: #631c1c;*/
+    -fx-background-size: cover;
+    -fx-background-image: url("imagenes/fondoPiePag.jpg");
+}
+
